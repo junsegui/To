@@ -1,22 +1,24 @@
 
 import './App.css';
 import { GlobalStyle } from './components/GlobalStyle';
-import { Box } from './components/Box';
-import { BoxContainer } from './components/BoxContainer';
-import { List } from './components/List';
-import { useState } from 'react';
+import { Home } from './components/Home/Home';
+import {Routes, Route} from  "react-router-dom"
+import { Navbar } from './components/navbar/Navbar';
+import { To_do } from './components/To-do/To_do';
 
 function App() {
-  const [inputText,setInputText]=useState("")
-  const [todos,setTodos]=useState([]);
+  
 
   return (
     <>
     <GlobalStyle/>
-    <Box>
-      <BoxContainer setInputText={setInputText} todos={todos} setTodos={setTodos} inputText={inputText}/>
-      <List todos={todos} setTodos={setTodos}/>
-    </Box>
+    <Navbar/>
+    <Routes>
+      <Route path={"/"} element={<Home/>}/>
+      <Route path={"To-Do"} element={<To_do/>}/>
+    </Routes>
+ 
+   
     
     </>
   );
