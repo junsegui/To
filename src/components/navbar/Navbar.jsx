@@ -7,6 +7,7 @@ export const Navbar = () => {
     <Nav>
         <Links to="/">Home</Links>
         <Links to="To-Do">To-Do</Links>
+        <Links to="PokeApi">PokeApi</Links>
     </Nav>
   )
 }
